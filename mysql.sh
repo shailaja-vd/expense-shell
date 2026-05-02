@@ -42,7 +42,7 @@ VALIDATE $? "Enabling MySQL Server"
 systemctl start mysqld &>>$LOG_FILE_NAME
 VALIDATE $? "Starting MySQL Server"
 
-mysql -h mysql.enjam.online -u root -pExpenseApp@1 -e 'show database;'
+mysql -h mysql.enjam.online -u root -pExpenseApp@1 -e 'show databases;'
 
 if [ $? -ne 0 ]
 then
