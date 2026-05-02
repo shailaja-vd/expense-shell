@@ -36,7 +36,7 @@ CHECK_ROOT
 dnf module disable nodejs -y &>>$LOG_FILE_NAME
 VALIDATE $? "Disabling existing default Nodejs"
 
-dnf module enable nodejs:20 -Y &>>$LOG_FILE_NAME
+dnf module enable nodejs:20 -y &>>$LOG_FILE_NAME
 VALIDATE $? "Enabling NodeJs 20"
 
 dnf install nodejs -y &>>$LOG_FILE_NAME
